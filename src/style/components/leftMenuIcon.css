@@ -1,0 +1,16 @@
+.left-menu-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.left-menu-icon-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}

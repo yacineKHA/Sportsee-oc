@@ -1,0 +1,19 @@
+.nutri-card-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    min-width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-color: #FBFBFB;
+    color: black;
+}
+
+.nutri-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+}

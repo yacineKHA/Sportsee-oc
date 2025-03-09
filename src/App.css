@@ -1,0 +1,51 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.app-main-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.app-content-container {
+    display: flex;
+    background-color: lightblue;
+    flex-direction: column;
+    gap: 70px;
+    width: 100%;
+}
+
+.app-content-wrapper {
+    padding: 50px;
+}
+
+.app-title-container {
+    color: black;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.app-chart-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: lightcoral;
+}
+
+.app-left-charts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 80%;
+}
+
+.app-bottom-charts-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

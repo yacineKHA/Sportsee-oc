@@ -1,0 +1,50 @@
+
+.daily-activity-responsive-container {
+    width: 100%;
+    max-height: 400px;
+    background-color: #FBFBFB;
+    color: black;
+    position: relative;
+}
+
+.responsive-container .chart-title {
+    
+}
+
+.tooltip-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: red;
+    height: 100px;
+    padding: 5px;
+    margin-left: 27px;
+    color: white;
+}
+
+.daily-activity-responsive-container .legend-main-container {
+    position: absolute;
+    display: flex;
+    gap: 50px;
+    color: #74798C;
+    font-weight: 500;
+    font-size: 15px;
+    right: 34px;
+    top: -416px;
+}
+
+.daily-activity-responsive-container .legend-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.daily-activity-responsive-container .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
