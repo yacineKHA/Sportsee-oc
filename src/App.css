@@ -14,7 +14,6 @@
 
 .app-content-container {
     display: flex;
-    background-color: lightblue;
     flex-direction: column;
     gap: 70px;
     width: 100%;
@@ -30,11 +29,18 @@
     margin-bottom: 50px;
 }
 
+.app-title-container span {
+    color: red;
+}
+
+.app-title-container h2:first-child {
+    font-size: 48px;
+}
+
 .app-chart-section {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: lightcoral;
 }
 
 .app-left-charts-container {

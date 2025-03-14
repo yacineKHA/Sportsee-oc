@@ -10,7 +10,7 @@ const NutritionCard = ({ item, value }) => {
             <div className="nutri-image-container" style={{ backgroundColor: item.bgColor }}>
                 <img src={iconPath} alt={item.name} />
             </div>
-            <div>
+            <div className="nutri-card-text">
                 <p>{value}</p>
                 <p>{item.name}</p>
             </div>

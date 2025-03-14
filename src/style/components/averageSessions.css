@@ -1,0 +1,17 @@
+.average-sessions-main-container {
+    width: 258px;
+    height: 263px;
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.average-sessions-tooltip-container {
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}

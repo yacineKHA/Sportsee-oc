@@ -5,6 +5,7 @@
     color: black;
     background-color: #FBFBFB;
     padding: 5px;
+    border-radius: 5px;
 }
 
 .circual-chart-container .circular-responsive-container {

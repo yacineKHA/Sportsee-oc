@@ -3,11 +3,12 @@
     justify-content: center;
     align-items: center;
     width: 200px;
-    min-width: 100px;
     height: 100px;
     padding: 10px;
     background-color: #FBFBFB;
     color: black;
+    border-radius: 5px;
+    gap: 17px;
 }
 
 .nutri-image-container {
@@ -16,4 +17,15 @@
     justify-content: center;
     width: 60px;
     height: 60px;
+}
+
+.nutri-card-text p:first-child {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.nutri-card-text p:last-child {
+    font-weight: 500;
+    font-size: 13px;
+    color: #74798C;
 }

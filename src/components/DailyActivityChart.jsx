@@ -56,21 +56,32 @@ const DailyActivityChart = () => {
 
 
     return (
-        <ResponsiveContainer className="daily-activity-responsive-container">
-            <p className="chart-title">Activité quotidienne</p>
-            <BarChart data={data} barSize={10}>
-                <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                <XAxis dataKey="day" axisLine={false} />
-                <YAxis yAxisId="weight" axisLine={false} domain={[minPoids - 1, maxPoids + 1]} orientation="right" />
-                <YAxis yAxisId="cal" axisLine={false} domain={[minCalories - 50, maxCalories + 50]} hide />
-                <Tooltip content={CustomTooltip} cursor={{ fill: "#C4C4C480" }} />
-                <Legend
-                    content={CustomLegend}
-                />
-                <Bar dataKey="kilogram" fill="#282D30" name="Poids (kg)" yAxisId="weight" radius={[20, 20, 0, 0]} />
-                <Bar dataKey="calories" fill="#ff0000" name="Calories brûlées (kCal)" yAxisId="cal" radius={[20, 20, 0, 0]} />
-            </BarChart>
-        </ResponsiveContainer>
+        <div className="daily-activity-main-container">
+            <div className="daily-activity-title">
+                <p>
+                    Activité quotidienne
+                </p>
+            </div>
+            <ResponsiveContainer className="daily-activity-responsive-container">
+
+                <BarChart data={data} barSize={10}>
+                    <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                    <XAxis dataKey="day" axisLine={false} />
+                    <YAxis yAxisId="weight"
+                        axisLine={false}
+                        domain={[minPoids, maxPoids]}
+                        orientation="right" />
+                    <YAxis yAxisId="cal" axisLine={false} domain={[minCalories, maxCalories]} hide />
+                    <Tooltip content={CustomTooltip} cursor={{ fill: "#C4C4C480" }} />
+                    <Legend
+                        content={CustomLegend}
+                    />
+                    <Bar dataKey="kilogram" fill="#282D30" name="Poids (kg)" yAxisId="weight" radius={[20, 20, 0, 0]} />
+                    <Bar dataKey="calories" fill="#ff0000" name="Calories brûlées (kCal)" yAxisId="cal" radius={[20, 20, 0, 0]} />
+                </BarChart>
+            </ResponsiveContainer>
+        </div>
+
     );
 };
 

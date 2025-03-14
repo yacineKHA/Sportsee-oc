@@ -43,7 +43,7 @@ function App() {
         <div className='app-content-container'>
           <div className='app-content-wrapper'>
             <div className='app-title-container'>
-              <h2>Bonjour {userData.firstName}</h2>
+              <h2>Bonjour <span>{userData.firstName}</span></h2>
               <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
             </div>
             <div className='app-chart-section'>

@@ -1,14 +1,22 @@
+.daily-activity-main-container {
+    height: 100%;
+    width: 100%;
+    background-color: #FBFBFB;
+    color: black;
+}
 
 .daily-activity-responsive-container {
     width: 100%;
-    max-height: 400px;
+    max-height: 200px;
     background-color: #FBFBFB;
     color: black;
     position: relative;
+    border-radius: 5px;
+    
 }
 
-.responsive-container .chart-title {
-    
+.daily-activity-title {
+    padding: 30px 0 50px 30px;
 }
 
 .tooltip-main-container {
@@ -32,7 +40,7 @@
     font-weight: 500;
     font-size: 15px;
     right: 34px;
-    top: -416px;
+    top: -270px;
 }
 
 .daily-activity-responsive-container .legend-item {
