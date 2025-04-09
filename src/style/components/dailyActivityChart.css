@@ -56,3 +56,9 @@
     border-radius: 50%;
     display: inline-block;
 }
+
+@media (max-width: 1250px) {
+    .daily-activity-main-container {
+        height: 320px;
+    }
+}

@@ -55,3 +55,38 @@
     justify-content: space-between;
     width: 100%;
 }
+
+@media (max-width: 1250px) {
+    .app-content-wrapper {
+        padding: 30px;
+    }
+
+    .app-chart-section {
+        max-width: 850px;
+    }
+
+    .app-title-container h2:first-child {
+        font-size: 36px;
+    }
+    .app-main-container {
+        height: 125vh;
+    }
+
+    .app-chart-section {
+        flex-direction: column;
+        gap: 40px;
+
+        .app-left-charts-container {
+            width: 100%;
+        }
+
+        .app-left-charts-container {
+            gap: 30px;
+        }
+
+        .app-bottom-charts-container {
+            flex-wrap: wrap;
+            gap: 0;
+        }
+    }
+}

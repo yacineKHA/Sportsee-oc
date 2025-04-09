@@ -23,8 +23,8 @@ const LeftMenu = () => {
                     <LeftMenuIcon key={icon} icon={icon}/>
                 ))}
             </div>
-            <div>
-                Copiryght, SportSee 2020
+            <div className="left-menu-text">
+                <p>Copyright, SportSee 2020</p>
             </div>
         </div>
     )

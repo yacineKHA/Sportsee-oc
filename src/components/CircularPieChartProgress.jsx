@@ -41,7 +41,7 @@ const CircularPieChartProgress = ({ percentage }) => {
             {/* Texte au centre du cercle */}
             <div className='circular-text-container'>
                 <p>{percentage}%</p>
-                <p>de votre objectif</p>
+                <span>de votre objectif</span>
             </div>
             <div className="circular-score-container">
                 Score

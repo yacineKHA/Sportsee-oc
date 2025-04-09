@@ -5,4 +5,25 @@
     width: 117px;
     height: 100%;
     justify-content: space-between;
+    flex-shrink: 0;
+
+}
+
+.left-menu-text {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.left-menu-text p{
+    writing-mode: sideways-lr;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+@media (max-width: 1250px) {
+
+    .left-menu-main-container {
+
+    }
 }

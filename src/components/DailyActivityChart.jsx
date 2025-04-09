@@ -29,7 +29,7 @@ const CustomTooltip = ({ active, payload }) => {
     }
 };
 
-const DailyActivityChart = () => {
+const DailyActivityChart = ({userId, user_mock}) => {
     const [data, setData] = useState([]);
 
     const minPoids = getMinValue(data, "poids");
@@ -41,7 +41,7 @@ const DailyActivityChart = () => {
     useEffect(() => {
         const fetchActivityData = async () => {
             try {
-                const fetchData = await getActivityData(12);
+                const fetchData = await getActivityData(userId, user_mock);
                 if (fetchData) {
                     setData(fetchData);
                 }
@@ -51,7 +51,6 @@ const DailyActivityChart = () => {
         };
 
         fetchActivityData();
-
     }, []);
 
 
@@ -63,15 +62,14 @@ const DailyActivityChart = () => {
                 </p>
             </div>
             <ResponsiveContainer className="daily-activity-responsive-container">
-
                 <BarChart data={data} barSize={10}>
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <XAxis dataKey="day" axisLine={false} />
                     <YAxis yAxisId="weight"
                         axisLine={false}
-                        domain={[minPoids, maxPoids]}
+                        domain={[minPoids-10, maxPoids+10]}
                         orientation="right" />
-                    <YAxis yAxisId="cal" axisLine={false} domain={[minCalories, maxCalories]} hide />
+                    <YAxis yAxisId="cal" axisLine={false} domain={[minCalories-10, maxCalories+10]} hide />
                     <Tooltip content={CustomTooltip} cursor={{ fill: "#C4C4C480" }} />
                     <Legend
                         content={CustomLegend}

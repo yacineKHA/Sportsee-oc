@@ -5,12 +5,12 @@ import { getUserPerformance } from "../services/api";
 
 
 
-const RadarGraph = () => {
+const RadarGraph = ({userId, user_mock}) => {
     const [data, setData] = useState({});
 
     useEffect(() => {
         const getPerfData = async () => {
-            const response = await getUserPerformance(12);
+            const response = await getUserPerformance(userId, user_mock);
             if (response) {
                 const formattedData = response.data.map(item => ({
                     ...item,
@@ -20,7 +20,7 @@ const RadarGraph = () => {
             }
         }
 
-        getPerfData()
+        getPerfData();
     }, [])
 
     return (
@@ -35,6 +35,11 @@ const RadarGraph = () => {
                             fontSize: 9,
                             fontWeight: 500
                         }}
+                    />
+                    <PolarRadiusAxis
+                        tickCount={6} 
+                        axisLine={false} 
+                        tick={false}
                     />
                     <Radar dataKey="value" fill="#FF0101" fillOpacity={0.7} />
                 </RadarChart>

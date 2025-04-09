@@ -17,6 +17,7 @@
     justify-content: center;
     width: 60px;
     height: 60px;
+    border-radius: 6px;
 }
 
 .nutri-card-text p:first-child {
@@ -28,4 +29,12 @@
     font-weight: 500;
     font-size: 13px;
     color: #74798C;
+}
+
+@media (max-width: 1250px) {
+
+    .nutri-card-main-container {
+        width: 170px;
+    }
+    
 }

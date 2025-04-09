@@ -4,3 +4,9 @@
     height: 100%;
     justify-content: space-between;
 }
+
+@media (max-width: 1250px) {
+    .nutrition-list-main-container {
+        flex-direction: row;
+    }
+}

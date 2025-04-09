@@ -33,3 +33,8 @@
     left: 10%;
     font-weight: 500;
 }
+
+.circular-text-container span {
+    text-align: center;
+    color: #74798C;
+}
