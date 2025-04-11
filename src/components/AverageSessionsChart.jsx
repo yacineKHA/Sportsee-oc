@@ -45,15 +45,15 @@ const CustomDot = (props) => {
 const CustomCursor = ({ points, hoveredIndex }) => {
     if (!points || !hoveredIndex) return null;
 
-    const { x } = points[0]; // Position X du point sélectionné
+    const { x } = points[0]; //Position X du point sélectionné
 
     return (
         <rect
-            x={x} // Position à partir du point sélectionné
+            x={x} // On part de x
             y={0}
             width="100%" // Recouvre toute la partie droite
             height="100%"
-            fill="rgba(0, 0, 0, 0.3)" // Assombrissement
+            fill="rgba(0, 0, 0, 0.3)" //Couleur de fond
         />
     );
 };

@@ -27,7 +27,8 @@ const RadarGraph = ({userId, user_mock}) => {
         <div className='radar-graph-container'>
             <ResponsiveContainer width="100%" height="100%">
                 <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
-                    <PolarGrid radialLines={false} />
+                    <PolarGrid radialLines={false} //Ligne du graphique 
+                    />
                     <PolarAngleAxis
                         dataKey="kind"
                         tick={{
@@ -35,13 +36,17 @@ const RadarGraph = ({userId, user_mock}) => {
                             fontSize: 9,
                             fontWeight: 500
                         }}
+                        // text
                     />
                     <PolarRadiusAxis
                         tickCount={6} 
                         axisLine={false} 
                         tick={false}
+                        // Nombre de lignes
                     />
-                    <Radar dataKey="value" fill="#FF0101" fillOpacity={0.7} />
+                    <Radar dataKey="value" fill="#FF0101" fillOpacity={0.7} 
+                        //Valeurs du graphique
+                    />
                 </RadarChart>
             </ResponsiveContainer>
         </div>

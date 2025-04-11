@@ -28,7 +28,7 @@ const CircularPieChartProgress = ({ percentage }) => {
                         outerRadius={75} // Rayon extérieur
                         startAngle={90} // Commence en haut
                         endAngle={90 - (-360 * (percentage / 100))} // Calcul pourcentage
-                        cornerRadius={20} // Bords arrondis
+                        cornerRadius={20}
                         dataKey="value"
                     >
                         {data.map((entry, index) => (

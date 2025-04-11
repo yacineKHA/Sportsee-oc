@@ -1,6 +1,5 @@
 import "../style/components/dailyActivityChart.css"
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, CartesianGrid } from "recharts";
-import { getMinValue, getMaxValue } from "../utils/dataUtils";
 import { useEffect, useState } from "react";
 import { getActivityData } from "../services/api";
 
@@ -32,12 +31,6 @@ const CustomTooltip = ({ active, payload }) => {
 const DailyActivityChart = ({userId, user_mock}) => {
     const [data, setData] = useState([]);
 
-    const minPoids = getMinValue(data, "poids");
-    const maxPoids = getMaxValue(data, "poids");
-
-    const minCalories = getMinValue(data, "calories");
-    const maxCalories = getMaxValue(data, "calories");
-
     useEffect(() => {
         const fetchActivityData = async () => {
             try {
@@ -63,13 +56,14 @@ const DailyActivityChart = ({userId, user_mock}) => {
             </div>
             <ResponsiveContainer className="daily-activity-responsive-container">
                 <BarChart data={data} barSize={10}>
-                    <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                    <CartesianGrid strokeDasharray="3 3" vertical={false} // Lignes horizontales du graphique
+                    /> 
                     <XAxis dataKey="day" axisLine={false} />
                     <YAxis yAxisId="weight"
                         axisLine={false}
-                        domain={[minPoids-10, maxPoids+10]}
+                        domain={([min, max]) => [min - 10, max + 10]}
                         orientation="right" />
-                    <YAxis yAxisId="cal" axisLine={false} domain={[minCalories-10, maxCalories+10]} hide />
+                    <YAxis yAxisId="cal" axisLine={false} domain={([min, max]) => [min-50, max+50]} hide />
                     <Tooltip content={CustomTooltip} cursor={{ fill: "#C4C4C480" }} />
                     <Legend
                         content={CustomLegend}
